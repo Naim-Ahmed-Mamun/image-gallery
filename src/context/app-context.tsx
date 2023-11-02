@@ -15,17 +15,17 @@ export const AppContext = createContext<IContext | null>(null);
 const AppProvider = ({children}: {children: React.ReactNode}) => {
   const [selectedItems,setSelectedItems] = useState<ImageData[]>([]);
   const [images, setImages] = useState<ImageData[]>([
-    { id: "one", src: "/images/image-1.webp" },
-    { id: "two", src: "/images/image-2.webp" },
-    { id: "three", src: "/images/image-3.webp" },
-    { id: "four", src: "/images/image-4.webp" },
-    { id: "five", src: "/images/image-5.webp" },
-    { id: "six", src: "/images/image-6.webp" },
-    { id: "seven", src: "/images/image-7.webp" },
-    { id: "eight", src: "/images/image-8.webp" },
-    { id: "nine", src: "/images/image-9.webp" },
-    { id: "ten", src: "/images/image-10.webp" },
-    { id: "eleven", src: "/images/image-11.webp" },
+    { id: "one", src: "/images/image-1.webp",feature:true },
+    { id: "two", src: "/images/image-2.webp",feature:false },
+    { id: "three", src: "/images/image-3.webp",feature:false },
+    { id: "four", src: "/images/image-4.webp",feature:false },
+    { id: "five", src: "/images/image-5.webp",feature:false },
+    { id: "six", src: "/images/image-6.webp",feature:false },
+    { id: "seven", src: "/images/image-7.webp",feature:false },
+    { id: "eight", src: "/images/image-8.webp",feature:false },
+    { id: "nine", src: "/images/image-9.webp",feature:false },
+    { id: "ten", src: "/images/image-10.webp",feature:false },
+    { id: "eleven", src: "/images/image-11.webp",feature:false },
   ]);
 
   const handleSelectedItems = (item:ImageData) => {

@@ -33,9 +33,11 @@ const ImageLisItem = ({ image, index, moveImage }: IProps) => {
     },
   });
   
+  const isFeatureImage = image.feature; 
 
   return (
-    <li ref={(node) => ref(drop(node))} className={`image-item image-${index}`}>
+    <li ref={(node) => ref(drop(node))} 
+    className={`image-item ${context?.selectedItems.includes(image) ? 'selected' : ''} image-${index} ${isFeatureImage ? 'feature-image' : ''}`}>
       <div className="image-container">
         <div className="checkbox-container">
           <Checkbox
